@@ -7,5 +7,10 @@
 echo "Christian Guerrero's CST336 Internet Programming";
 
 ?>
+    <br/><br/>
+        <h1 Labs </h1>
+            <a href="Labs/Lab1"> Lab1 </a>
+            
+        
 </body>
 </html>
