@@ -9,7 +9,7 @@ echo "Christian Guerrero's CST336 Internet Programming";
 ?>
     <br/><br/>
         <h1 Labs </h1>
-            <a href="labs/PersonalPortfolio/index.html"> Lab1 </a>
+            <a href="cst336/labs/PersonalPortfolio/index.html"> Lab1 </a>
             
         
 </body>
