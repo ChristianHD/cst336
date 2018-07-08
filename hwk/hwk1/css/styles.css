@@ -1,66 +1,59 @@
 body {
-    background-color:black;
-    color:white;
+    background-color:#dfe3ee;
+    color:#424242;
+    font-family: 'Roboto', sans-serif;
 }
 
-header, main, nav, footer {
-    text-align:center;
+header, nav, footer {
+    text-align: center;
 }
+
+nav {
+      background-color: #3b5998;   
+      padding-bottom: 12px;
+      padding-top: 8px;
+ }
 
 nav a {  /* links within "nav" container */
     padding:15px;
     padding-bottom:4px;
-    font-size: 1.8em;
+    font-size: 1.2em;
     text-decoration: none;  /* removes underline */
-    color:white;            /* by default, links are blue */
+    color: #8b9dc3;            /* by default, links are blue */
+    font-family: 'Play', cursive;
 }
 
 nav a:hover {
-    border-bottom:2px orange solid;
-    font-size: 2em;
+    color: white;
+    border-bottom:2px white solid;
+    font-size: 1.4em;
     transition: .9s;    /*  transition effect */
 }
-
-#me, #welcomeText, #csumb-logo {
-    float:left;
+div > div {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 50%;
+    float: left;
 }
 
-footer {
-    font-size: .8em;
-    color: orange;
-    clear: left;
+div > div > img {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    float: right;
+    padding-right: 10px;
+    min-width: 300px;
+}
+
+div > div > div {
+    width: 70%;
+    padding-left: 10px;
+    float: left;
+    min-width: 300px;
+    font-size: 1.1em;
 }
 
 #activePage {
-    color:orange;
-    border-bottom:2px orange solid;
-}
-
-table {
-    margin: 0px auto;
-
-}
-
-td {
-    padding: 10px;
-    font-size: 1.3em;
-}
-
-td strong {
-    color: orange
-}
-
-#table-header {
-    background-color: #351a00;
-}
-
-.table-row {
-    background-color: #753900;
-}
-
-ul {
-    text-align: left;
-    padding-left: 200px;
+    color:white;
 }
 
 .hobby {
@@ -68,7 +61,15 @@ ul {
 }
 
 h1 {
-    font-family: 'Anton' cursive;
-    font-size: 6em;
+    font-family: 'Play';
+    font-size: 3em;
     margin-bottom: 0px;
+    color: #f7f7f7;
+    background-color: #3b5998;
+    font-weight: bold;
+}
+
+footer {
+    font-size: .8em;
+    color: #3B5998;
 }
