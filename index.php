@@ -9,8 +9,9 @@ echo "Christian Guerrero's CST336 Internet Programming";
 ?>
     <br/><br/>
         <h1 Labs </h1>
-            <a href="labs/PersonalPortfolio/index.html"> Lab 1 - Personal Portfolio </a>
             
+            <a href="labs/lab1/index.html"> Lab 1 - Personal Portfolio </a>
+            <a href="hwk/hwk1/index.html"> Hwk1 - Operating Systems </a>
         
 </body>
 </html>
