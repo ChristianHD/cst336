@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+
+body{
+    color: #454545;
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    background-color: rgb(240,240,240);
+    width:100%;
+}
+
+#top {
+    height: 50px;
+}
+
+#top h1{
+    color: #003F87;
+}
+
+#buttons{
+  padding-top: 10px;
+}
+
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 300px;
+}
+
+.button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+#middle{
+    padding-top: 30px;
+    height: 500px;
+}
+
+#middle img {
+    margin-left: 10px;
+    border: 1px #007AFF solid;
+    border-radius: 10px;
+}
+
+#form {
+    width: 100px;
+}
+
+footer{
+    font-size: 0.8em;
+}
+footer img {
+  margin: 0px;
+  padding: 0px;
+}
+
+#cards{
+    position: absolute;
+    alignment-baseline:  center;
+    top: 110px;
+}
+
