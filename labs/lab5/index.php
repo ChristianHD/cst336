@@ -34,6 +34,8 @@
             if (!empty($_GET['product'])){
                 $sql .= " AND productName LIKE :productName";
                 $namedParameters[":productName"] = "%" . $_GET['product'] . "%";
+                $sql .= " AND productDecription LIKE :productDescription";
+                $namedParameters[":productDescription"] = "%" . $_GET['product'] . "%";
             }
             
             // Checks whether user has selected a cateogry
