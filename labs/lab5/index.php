@@ -1,7 +1,6 @@
 <?php
     include 'dbConnection.php';
-    
-    $conn = getDatabaseConnection("heroku_d14d6fd39ec2215");
+    $conn = getDatabaseConnection();
     
     function displayCategories(){
         global $conn;
@@ -78,14 +77,19 @@
 ?>
 <html>
     <head>
-        <title> Ottermart Product Search </title>
-        <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+      <title>Ottermar | Product Search</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>        
+      <link href="css/styles.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div>
+        <div class="container-fluid">
             <h1>Ottermart Product Search </h1>
-            <form>
-                Product: <input type="text" name="product"/>
+            <form style="width: 400px">
+                Product: <input type="text" class="form-control" name="product"/>
                 <br>
                 Category:
                     <select name="category">
@@ -93,15 +97,15 @@
                         <?=displayCategories()?>
                     </select>
                 <br>
-                Price: From <input type="text" name="priceFrom" size="7"/>
-                       To   <input type="text" name="priceTo" size="7"/>
+                Price: From <input type="text" class="form-control" name="priceFrom" size="7"/>
+                       To   <input type="text" class="form-control" name="priceTo" size="7"/>
                 <br>
                 Order result by:
                 <br>
-                <input type="radio" name="orderBy" value="price"/> Price <br>
-                <input type="radio" name="orderBy" value="name"/> Name
+                <input type="radio" class="form-control" name="orderBy" value="price"/> Price <br>
+                <input type="radio" class="form-control" name="orderBy" value="name"/> Name
                 <br><br>
-                <input type="submit" value="Search" name="searchForm" />
+                <input type="submit" class='btn btn-primary' value="Search" name="searchForm" />
             </form>
             <br/>
         </div>

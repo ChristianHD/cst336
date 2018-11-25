@@ -12,7 +12,7 @@ echo "Christian Guerrero's CST336 Internet Programming";
             <a href="labs/lab1/index.html"> Lab 1 | Personal Website</a><br>
             <a href="labs/lab2/index.php"> Lab 2 | Slot Machine</a><br>
             <a href="labs/lab4/index.php"> Lab 4 | Scart</a><br>
-            <a href="labs/lab5/index.php"> Lab 5 | Ottermart</a><br>
+            <a href="labs/lab5/login.php"> Lab 5 | Ottermart</a><br>
             
             <h2>Homework</h2>           
             <a href="hwk/hwk1/index.html"> Hwk1 | Operating Systems</a><br>

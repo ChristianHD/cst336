@@ -2,7 +2,7 @@
 
     include 'dbConnection.php';
     
-    $conn = getDatabaseConnection("heroku_d14d6fd39ec2215");
+    $conn = getDatabaseConnection();
     
     $productId = $_GET['productId'];
     
