@@ -5,14 +5,14 @@
     function displayCategories(){
         global $conn;
         
-        $sql = "SELECT catID, catName FROM om_category ORDER BY catName";
+        $sql = "SELECT catId, catName FROM om_category ORDER BY catName";
         
         $stmt = $conn->prepare($sql);
         $stmt ->execute();
         $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
         foreach($records as $record){
-            echo "<option value='".$record["catId"]."'>". $record["catName"]."</option>";
+            echo "<option value='".$record["catId"]."' >" . $record["catName"] . "</option>";
         }
     }
     
@@ -46,7 +46,7 @@
             // Checks whether user has typed something in the "Product" text box
             if (!empty($_GET['priceFrom'])){
                 $sql .= " AND price >= :priceFrom";
-                $namedParameters[":priceFrom"] = "%" . $_GET['priceFrom'];
+                $namedParameters[":priceFrom"] = $_GET['priceFrom'];
             }
             
             // Checks whether user has selected a cateogry
@@ -77,7 +77,7 @@
 ?>
 <html>
     <head>
-      <title>Ottermar | Product Search</title>
+      <title>Ottermart | Product Search</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -87,29 +87,72 @@
     </head>
     <body>
         <div class="container-fluid">
-            <h1>Ottermart Product Search </h1>
-            <form style="width: 400px">
-                Product: <input type="text" class="form-control" name="product"/>
-                <br>
-                Category:
-                    <select name="category">
-                        <option value="">Select One</option>
-                        <?=displayCategories()?>
-                    </select>
-                <br>
-                Price: From <input type="text" class="form-control" name="priceFrom" size="7"/>
-                       To   <input type="text" class="form-control" name="priceTo" size="7"/>
-                <br>
-                Order result by:
-                <br>
-                <input type="radio" class="form-control" name="orderBy" value="price"/> Price <br>
-                <input type="radio" class="form-control" name="orderBy" value="name"/> Name
-                <br><br>
-                <input type="submit" class='btn btn-primary' value="Search" name="searchForm" />
+            <h1>Ottermart Product Search</h1>
+            <form>
+                <div class="row">
+                    <div class="form-group col-md-3"/>
+                        <label for="">Product</label>
+                        <input type="text" class="form-control" name="product" placeholder="Enter a product name"/>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="">Product Category</label>
+                        <select class="form-control" name="category">
+                            <option value="">Select One</option>
+                            <?=displayCategories()?>
+                        </select>                
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="">From:</label>
+                        <input type="text" class="form-control" name="priceFrom" placeholder="Price"/>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="">To</label>
+                        <input type="text" class="form-control" name="priceTo" placeholder="Price"/>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="">Sort By:</label><br>
+                        <input type="radio" class="form-check-input" name="orderBy" value="price"/>
+                        <label class="form-check-label">Price</label>
+                        <input type="radio" class="form-check-input" name="orderBy" value="name"/>
+                        <label class="form-check-label">Name</label>
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <input type="submit" class="btn btn-primary" value="Search" name="searchForm"></button>        
+                    </div>
+                </div>
             </form>
-            <br/>
+            <?= displaySearchResults() ?>
         </div>
-        <hr>
-        <?= displaySearchResults() ?>
+        
+        
+        <!--<div class="container-fluid">-->
+        <!--    <h1>Ottermart Product Search </h1>-->
+        <!--    <form style="width: 400px">-->
+        <!--        Product: <input type="text" class="form-control" name="product"/>-->
+        <!--        <br>-->
+        <!--        Category:-->
+        <!--            <select class="form-control" -->
+        <!--            name="category">-->
+        <!--                <option value="">Select One</option>-->
+        <!--                <?=displayCategories()?>-->
+        <!--            </select>-->
+        <!--        <br>-->
+        <!--        Price: -->
+        <!--               From <input type="text" class="form-control" name="priceFrom" style="width: 100px" size="7"/>-->
+        <!--               To   <input type="text" class="form-control" name="priceTo" style="width: 100px" size="7"/>-->
+        <!--        <br>-->
+        <!--        Order result by:-->
+        <!--        <br>-->
+        <!--        <input type="radio" class="form-check-input" name="orderBy" value="price"/> Price-->
+        <!--        <input type="radio" class="form-check-input" name="orderBy" value="name"/> Name-->
+        <!--        <br><br>-->
+        <!--        <input type="submit" class='btn btn-primary' value="Search" name="searchForm" />-->
+        <!--    </form>-->
+        <!--    <br/>-->
+        <!--</div>-->
+        <!--<hr>-->
+        
     </body>
 </html>

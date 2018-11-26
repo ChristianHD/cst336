@@ -25,8 +25,8 @@
         <div class="container-fluid">
             <h1>Ottermart - Admin Site</h1>
             <form method="POST" action="loginProcess.php">
-                <strong>Username:</strong> <input type="text" class="form-control" name="username"/><br />
-                <strong>Password:</strong> <input type="password" class="form-control" name="password"/><br />
+                <strong>Username:</strong> <input type="text" class="form-control" name="username" placeholder="Enter username"/><br />
+                <strong>Password:</strong> <input type="password" class="form-control" name="password" placeholder="Password"/><br />
                 <input type="submit" class='btn btn-primary' name="submitForm" value="Login!"/><br />
                 <br/>
             </form>
