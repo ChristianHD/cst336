@@ -1,7 +1,7 @@
 <?php
 
     include '../dbConnection.php';
-    $dbConn = getDatabaseConnection("pets");
+    $dbConn = getDatabaseConnection();
     $sql = "SELECT *, YEAR(CURDATE()) - yob age
             FROM pets
             WHERE id = :id";

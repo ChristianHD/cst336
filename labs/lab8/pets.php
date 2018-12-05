@@ -3,7 +3,7 @@
     
     function getPetList(){
         include 'dbConnection.php';
-        $conn = getDatabaseConnection("pets");
+        $conn = getDatabaseConnection();
         $sql = "SELECT * FROM pets";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
