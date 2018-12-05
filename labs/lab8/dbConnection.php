@@ -1,7 +1,7 @@
 <?php
 
     //function getDatabaseConnection ($dbname = 'heroku_d14d6fd39ec2215'){
-    function getDatabaseConnection ($dbname = 'ottermart'){
+    function getDatabaseConnection ($dbname = 'pets'){
     
     $host = 'localhost';
     $username = 'root';

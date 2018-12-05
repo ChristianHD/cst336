@@ -1,18 +1,3 @@
-<style type="text/css">
-    .form-control{
-      margin-bottom: 5px;
-    }
-    
-    nav{
-      font-size: 2.0em !important;
-    }
-    
-    nav img{
-      margin: 20px 0px 20px 20px;
-    }
-    
-
-</style>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
@@ -28,13 +13,14 @@
     <nav class="navbar navbar-dark bg-primary">
       <img src="img/home.png" width="30" height="30" class="d-inline-block align-top" alt=""> First-Time Home Buyer
     </nav>	  
-	  <div class="container-fluid">
+	  <div class="container">
   		<p>This website will advise the steps to take in order to buy your dream house.</p>
   		<form>
   		  <div class="row">
-  			  <div class="form-group col-md-2">
+  			  <div class="form-group col-md-4">
       		  <label for="">Please enter your personal information</label><br>
       			<input type="text" class="form-control" name="firstname" placeholder="First Name">
+      			<p id="firstNameTextBox"></p>
       			<input type="text" class="form-control" name="lastname" placeholder="Last Name">
       			<input type="text" class="form-control" name="email" placeholder="Email Address"><br>
       			
@@ -56,17 +42,18 @@
       				<option value="OR">Oregon</option>				
       			</select>
       			<br>
-      			<label>If you want to create an account, please enter a username and a password</label><br>
+      			<label>If you want to create an account, e enter a userna			a password</label><br>
       			<input type="text" class="form-control" name="username" placeholder="Username">
       			<input type="password" class="form-control" name="password1" placeholder="Password">
       			<input type="password" class="form-control" name="password2" placeholder="Re-enter Password"><br>
       			<label>How did you hear about us?</label><br>
       			<textarea class="form-control" name="comments" rows="3" cols="40"></textarea><br>
-      			<?= displayRecommendation() ?>
-  			    <input type="submit" class="btn btn-primary" value="Submit" name="submit">
+  			    <button type="button" class="submitBtn btn btn-primary">Submit</button>
   			   </div>
   			</div>
   		</form>
+    <p id='firstTimeBuyer'></p>
 		</div>
+  <script src="js/myScript.js"></script>		
 	</body>
 </html>
