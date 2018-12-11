@@ -1,7 +1,7 @@
     <?php
         include 'dbConnection.php';
 
-        $conn = getDatabaseConnection("finalproject"); //Starts the Db connection
+        $conn = getDatabaseConnection(); //Starts the Db connection
 
         
         //Working 

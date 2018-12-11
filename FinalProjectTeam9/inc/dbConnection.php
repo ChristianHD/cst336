@@ -1,21 +1,12 @@
 <?php
 
-function getDatabaseConnection($dbname = "finalproject"){
+function getDatabaseConnection($dbname = "heroku_d14d6fd39ec2215"){
     //C9 db info
     
-    $host = 'localhost';
-    $username = 'root';
-    $password = '';
+    $host = 'us-cdbr-iron-east-01.cleardb.net';
+    $username = 'bf29d6bb70a081';
+    $password = '182044f8';
     
-    //when connecting from Heroku
-    if  (strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
-        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-        $host = $url["host"];
-        $dbname = substr($url["path"], 1);
-        $username = $url["user"];
-        $password = $url["pass"];
-    } 
-
     //creates db connection
     $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     

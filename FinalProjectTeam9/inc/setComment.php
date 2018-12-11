@@ -2,7 +2,7 @@
     function setLikes($id, $newComment){
         
         include 'dbConnection.php';
-        $conn = getDatabaseConnection("finalproject");
+        $conn = getDatabaseConnection();
         
         $sql = "INSERT INTO f_comments (productID, comments)
                 VALUES(:productID, :comments)";

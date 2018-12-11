@@ -1,6 +1,6 @@
 <?php
     include 'dbConnection.php';
-    $conn = getDatabaseConnection("finalproject");
+    $conn = getDatabaseConnection();
     
     $sql = "SELECT comments
             FROM f_comments

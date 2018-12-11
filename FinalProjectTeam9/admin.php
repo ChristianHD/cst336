@@ -2,7 +2,7 @@
     
     include 'inc/dbConnection.php';
     
-    $conn = getDatabaseConnection("finalproject");
+    $conn = getDatabaseConnection();
     
     session_start();
     if(!isset($_SESSION['adminName'])){

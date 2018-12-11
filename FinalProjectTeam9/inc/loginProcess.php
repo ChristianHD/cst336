@@ -4,7 +4,7 @@
     
     include 'dbConnection.php';
     
-    $conn = getDatabaseConnection("finalproject");
+    $conn = getDatabaseConnection();
     
     $username = $_POST['username'];
     $password = sha1($_POST['password']);
