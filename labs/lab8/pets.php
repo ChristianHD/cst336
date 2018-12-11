@@ -13,49 +13,67 @@
     }
 ?>
 	<!--Add main menu here -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <a class="navbar-brand" href="https://csumb.edu">CSUMB</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link" href="index.php">Home</a>
-                <a class="nav-item nav-link active" href="#">Adoptions</a><span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="about.php">About Us</a>
+	<div class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="https://csumb.edu">CSUMB</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="index.php">Home</a>
+                    <a class="nav-item nav-link active" href="#">Adoptions</a><span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="about.php">About Us</a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
     
     <div class="jumbotron">
       <h1> CSUMB Animal Shelter</h1>
-      <h2> The "official" animal adoption website of CSUMB </h2>
+      <h5> The "official" animal adoption website of CSUMB </h5>
     </div>
 
 <?php
     
     $pets =getPetList();
-    
+
     foreach($pets as $pet){
-        echo "Name: ";
-        echo "<a href='#' class='petLink' id='".$pet['id']."' >". $pet['name'] . "</a><br>";
-        echo "Type: " . $pet['type'] . "<br>";
-        echo "<button id='" . $pet['id']."' type='button' class='btn btn-primary petLink'>Adopt Me!</button>";
+        echo "<div class='row'>";
+            echo "<div class='col-sm-3'></div>";
+            
+            echo "<div class='col-sm-6'>";
+                echo "<div class='row'>";
+                    echo "<div class='col'>";
+                        echo "Name: ";
+                        echo "<a href='#' class='petLink' id='".$pet['id']."' >". $pet['name'] . "</a><br>";
+                        echo "Type: " . $pet['type'] . "<br>";
+                    echo "</div>";
+                    
+                    echo "<div class='col'>";
+                        echo "<button id='" . $pet['id']."' type='button' class='btn btn-primary petLink'>Adopt Me!</button>";
+                    echo "</div>";
+                    
+                
+                echo "</div>";
+            echo "</div>";
+            
+            echo "<div class='col-sm-3'></div>";
+            
+        echo "</div>";
         echo "<hr><br>";
     }
+
 ?>
-
-
-
-
 
     <script>
         $(document).ready(function(){
+            
             $(".petLink").click(function(){
                 
                 $('#petInfoModal').modal("show");
-                $("petInfo").html("<img src='img/loading.gif'>");
+                $("#petInfo").html("<img src='img/loading.gif'>");
                 
                 $.ajax({
                     
@@ -68,14 +86,13 @@
                         console.log(data);
                         $("#petInfo").html(" <img src='img/" + data.pictureURL + "'><br>" +
                                            " Age: " + data.age + "<br>" + 
-                                           " Breed: " + data.breeed + "<br>" + 
+                                           " Breed: " + data.breed + "<br>" + 
                                            data.description);
                                            
                         $("#petNameModalLabel").html(data.name);
                     },
-                    complete: function(data,status){
-                        
-                    }
+                    complete: function(data,status){}
+                    
                 });//ajax
             });//.petLink click
         });//document.ready

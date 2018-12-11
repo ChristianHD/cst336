@@ -11,11 +11,13 @@ echo "Christian Guerrero's CST336 Internet Programming";
             <h2>Labs</h2>
             <a href="labs/lab1/index.html"> Lab 1 | Personal Website</a><br>
             <a href="labs/lab2/index.php"> Lab 2 | Slot Machine</a><br>
+            <a href="labs/lab3/index.php"> Lab 3 | Pixabay Image Carousel</a><br>
             <a href="labs/lab4/index.php"> Lab 4 | Shopping cart using sessions</a><br>
             <a href="labs/lab5/index.php"> Lab 5 | OtterMart Product Seach</a><br>
             <a href="labs/lab5/admin.php"> Lab 6 | OtterMart Admin Site</a><br>
             <a href="labs/lab7/index.html"> Lab 7 | JavaScrip/jQuery (Hangman)</a><br>
             <a href="labs/lab8/index.php"> Lab 8 | Ajax and Bootstrap</a><br>
+            <a href="labs/lab9/index.php"> Lab 9 | Ajax and Bootstrap 2</a><br>
             
             <h2>Homework</h2>           
             <a href="hwk/hwk1/index.html"> Hwk1 | Operating Systems</a><br>
