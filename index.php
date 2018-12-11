@@ -26,7 +26,7 @@ echo "Christian Guerrero's CST336 Internet Programming";
             <a href="hwk/hwk4/index.html"> Hwk4 | HTML Form Elements (JS, jQuery version)</a><br>
             
             <h2>Final Lab</h2>
-            <a href="team9FinalProject/index.php">Team 9 Final Project</a><br>
+            <a href="FinalProjectTeam9/index.php">Team 9 Final Project</a><br>
             
 </body>
 </html>
